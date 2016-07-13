@@ -14,6 +14,8 @@
 		E11136711D356C1F00E3085B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E111366F1D356C1F00E3085B /* Main.storyboard */; };
 		E11136731D356C1F00E3085B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11136721D356C1F00E3085B /* Assets.xcassets */; };
 		E11136761D356C1F00E3085B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11136741D356C1F00E3085B /* LaunchScreen.storyboard */; };
+		E111367E1D35838600E3085B /* vistaTamano.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111367D1D35838600E3085B /* vistaTamano.swift */; };
+		E11136801D35936F00E3085B /* vistaConfirma.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111367F1D35936F00E3085B /* vistaConfirma.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E11136721D356C1F00E3085B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11136751D356C1F00E3085B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E11136771D356C1F00E3085B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E111367D1D35838600E3085B /* vistaTamano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaTamano.swift; sourceTree = "<group>"; };
+		E111367F1D35936F00E3085B /* vistaConfirma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaConfirma.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E11136721D356C1F00E3085B /* Assets.xcassets */,
 				E11136741D356C1F00E3085B /* LaunchScreen.storyboard */,
 				E11136771D356C1F00E3085B /* Info.plist */,
+				E111367D1D35838600E3085B /* vistaTamano.swift */,
+				E111367F1D35936F00E3085B /* vistaConfirma.swift */,
 			);
 			path = Pizza_N2;
 			sourceTree = "<group>";
@@ -143,7 +149,9 @@
 			files = (
 				E111366A1D356C1F00E3085B /* RootViewController.swift in Sources */,
 				E111366E1D356C1F00E3085B /* ModelController.swift in Sources */,
+				E111367E1D35838600E3085B /* vistaTamano.swift in Sources */,
 				E111366C1D356C1F00E3085B /* DataViewController.swift in Sources */,
+				E11136801D35936F00E3085B /* vistaConfirma.swift in Sources */,
 				E11136681D356C1F00E3085B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
