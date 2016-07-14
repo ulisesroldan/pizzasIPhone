@@ -11,15 +11,47 @@ import UIKit
 class vistaConfirma: UIViewController {
 
     var sTamano:String=""
+    var sMasa:String=""
+    var sQueso:String=""
+    var sIngredientes:String=""
+    var sExtras:String=""
+    
+    var pizza = Pizza?()
     
     @IBOutlet weak var lblTamano: UILabel!
+    @IBOutlet weak var lblMasa: UILabel!
+    @IBOutlet weak var lblQueso: UILabel!
+    @IBOutlet weak var lblIngred: UILabel!
+    @IBOutlet weak var lblExtras: UILabel!
     
     override func viewWillAppear(animated: Bool) {
+        sMasa = pizza!.masa!
         lblTamano.text=sTamano
+        lblMasa.text=sMasa
+        lblQueso.text=sQueso
+        lblIngred.text=sIngredientes
+        lblExtras.text=sExtras
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let pizzaConfig = pizza {
+            //var textoIngredientes:String = ""
+            for ingredientes in pizzaConfig.ingredientes! {
+                if (ingredientes != "Ninguno") {
+                    sIngredientes += "\(ingredientes) , "
+                }
+            }
+            for extras in pizzaConfig.extras! {
+                if (extras != "Ninguno") {
+                    sExtras += "\(extras) , "
+                }
+            }
+            sTamano = pizzaConfig.tamano!
+            sMasa = pizzaConfig.masa!
+            sQueso = pizzaConfig.queso!
+        }
+       
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,7 +61,13 @@ class vistaConfirma: UIViewController {
             let vTamanoP=segue.destinationViewController as! vistaTamano
             vTamanoP.sTamanoT=lblTamano.text!
             
-        } else if segue.identifier == "fromVistaConfirma2Inicio" {
+        } else if segue.identifier == "fromVistaConfirma2Masa" {
+            let vMasaP=segue.destinationViewController as! vistaMasa
+            vMasaP.sMasaT=lblMasa.text!
+            
+        }
+        
+        else if segue.identifier == "fromVistaConfirma2Inicio" {
             
         }
         

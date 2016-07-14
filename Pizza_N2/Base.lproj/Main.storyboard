@@ -31,6 +31,9 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizzaChica" translatesAutoresizingMaskIntoConstraints="NO" id="vE6-0s-Sxg">
                                 <rect key="frame" x="165" y="180" width="40" height="50"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizzaMediana" translatesAutoresizingMaskIntoConstraints="NO" id="4aw-HU-obH">
+                                <rect key="frame" x="145" y="155" width="80" height="100"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-79-ZHh">
                                 <rect key="frame" x="18" y="399" width="334" height="31"/>
                                 <connections>
@@ -43,11 +46,15 @@
                                 <color key="textColor" red="0.1043878219" green="0.46751572530000002" blue="0.89361985889999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizzaMediana" translatesAutoresizingMaskIntoConstraints="NO" id="4aw-HU-obH">
-                                <rect key="frame" x="145" y="155" width="80" height="100"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elige el tamaño que desees!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-PA-Dbh">
+                                <rect key="frame" x="6" y="46" width="358" height="28"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98535657050000003" green="0.94789006669999998" blue="0.024947919490000001" alpha="0.16233836209999999" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="nn9-79-ZHh" secondAttribute="leading" id="0Fj-vv-pUD"/>
                         </constraints>
@@ -121,21 +128,30 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM1-DK-2PO">
                                 <rect key="frame" x="305" y="200" width="70" height="30"/>
                                 <state key="normal" title="Cambiar"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sva-aN-uQK">
-                                <rect key="frame" x="305" y="309" width="70" height="30"/>
-                                <state key="normal" title="Cambiar"/>
+                                <connections>
+                                    <segue destination="c0H-B2-pLH" kind="unwind" unwindAction="fromVistaConfirma2Masa:" id="5Ga-Qr-9pb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl8-yj-LUf">
-                                <rect key="frame" x="305" y="416" width="70" height="30"/>
+                                <rect key="frame" x="305" y="420" width="70" height="30"/>
                                 <state key="normal" title="Cambiar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRI-jo-kxg">
                                 <rect key="frame" x="40" y="366" width="58" height="30"/>
                                 <state key="normal" title="Cambiar"/>
                                 <connections>
-                                    <segue destination="PFf-LN-4Wu" kind="show" id="aaS-G6-VZ8"/>
+                                    <segue destination="PFf-LN-4Wu" kind="show" identifier="vistaTamanoS" id="aaS-G6-VZ8"/>
                                 </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Extras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZm-ZG-0lL">
+                                <rect key="frame" x="147" y="420" width="135" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sva-aN-uQK">
+                                <rect key="frame" x="305" y="309" width="70" height="30"/>
+                                <state key="normal" title="Cambiar"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,13 +162,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblExtras" destination="cZm-ZG-0lL" id="3hk-NE-jRy"/>
+                        <outlet property="lblIngred" destination="RTN-0g-MQ2" id="TtV-kf-2Gz"/>
+                        <outlet property="lblMasa" destination="q0X-Uc-gf2" id="ti1-Y2-2pB"/>
+                        <outlet property="lblQueso" destination="NNb-eQ-hIj" id="0RR-eh-jdt"/>
                         <outlet property="lblTamano" destination="Vn3-ng-umc" id="3I4-Qd-dus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzU-73-kaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="c0H-B2-pLH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="-74"/>
+            <point key="canvasLocation" x="1234" y="-919"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="clB-vc-fyl">
@@ -201,46 +221,97 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sigue estos sencillos pasos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNU-gN-aJ1">
-                                        <rect key="frame" x="29" y="65" width="215" height="21"/>
+                                        <rect key="frame" x="49" y="65" width="215" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bienvenido a tu Selector de Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-Sh-Ut3">
-                                        <rect key="frame" x="14" y="42" width="261" height="21"/>
+                                        <rect key="frame" x="34" y="42" width="261" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.4192887931034483" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95971554485897437" green="0.70300379735008256" blue="0.25778029930778551" alpha="0.27645474141034482" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="fXT-Sh-Ut3" firstAttribute="leading" secondItem="1QC-TY-jzt" secondAttribute="leading" constant="14" id="5kd-ty-Qgt"/>
+                                    <constraint firstItem="fXT-Sh-Ut3" firstAttribute="leading" secondItem="1QC-TY-jzt" secondAttribute="leading" constant="34" id="5kd-ty-Qgt"/>
                                     <constraint firstItem="TNU-gN-aJ1" firstAttribute="centerX" secondItem="fXT-Sh-Ut3" secondAttribute="centerX" constant="-8" id="DsC-Us-3yu"/>
                                     <constraint firstItem="TNU-gN-aJ1" firstAttribute="top" secondItem="fXT-Sh-Ut3" secondAttribute="bottom" constant="2" id="iGz-B6-bYJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJi-dF-BU4">
-                                <rect key="frame" x="35" y="211" width="220" height="52"/>
-                                <state key="normal" title="                     Masa" image="pMasa">
+                                <rect key="frame" x="43" y="215" width="212" height="52"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <state key="normal" title="          Masa" image="pMasa">
                                     <color key="titleColor" red="0.090697174234921546" green="0.13344645884478129" blue="0.91760817307692311" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Zhi-aR-6Dq" kind="show" id="anB-pK-7C8"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94837740384615388" green="0.91426101132101223" blue="0.70179206323867371" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98535657050000003" green="0.94562716201953356" blue="0.80615340917053457" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="QKh-yT-HAY" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="3.5" id="NHZ-gR-cUI"/>
-                            <constraint firstItem="XNJ-IP-rvc" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="3.5" id="Rqc-fr-r53"/>
-                            <constraint firstItem="EJi-dF-BU4" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="-0.5" id="UiK-yW-xDE"/>
-                            <constraint firstItem="m4T-sM-vAB" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" id="xbs-hr-NJx"/>
-                            <constraint firstItem="EMc-I2-q6H" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leadingMargin" constant="68" id="yY5-gu-FJ7"/>
+                            <constraint firstItem="QKh-yT-HAY" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="-28" id="NHZ-gR-cUI"/>
+                            <constraint firstItem="XNJ-IP-rvc" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="-28" id="Rqc-fr-r53"/>
+                            <constraint firstItem="EJi-dF-BU4" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="-11" id="UiK-yW-xDE"/>
+                            <constraint firstItem="m4T-sM-vAB" firstAttribute="centerX" secondItem="EMc-I2-q6H" secondAttribute="centerX" constant="-31.5" id="xbs-hr-NJx"/>
+                            <constraint firstItem="EMc-I2-q6H" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leadingMargin" constant="35" id="yY5-gu-FJ7"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-1708"/>
+            <point key="canvasLocation" x="765" y="-1702"/>
+        </scene>
+        <!--Vista Masa-->
+        <scene sceneID="xQn-fG-2nm">
+            <objects>
+                <viewController id="Zhi-aR-6Dq" customClass="vistaMasa" customModule="Pizza_N2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u8L-j1-yE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ZQ-mI-tds"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NdA-xG-IpS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhn-EJ-H9N">
+                                <rect key="frame" x="20" y="172" width="339" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NdA-xG-IpS" id="5Mz-Ie-XDj"/>
+                                    <outlet property="delegate" destination="NdA-xG-IpS" id="Fag-fY-fVw"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfO-rH-0M8">
+                                <rect key="frame" x="166" y="416" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="n42-BD-5wb" kind="show" id="xIU-ZD-Nb3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Elige el tipo de masa que desees!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-3c-mpk">
+                                <rect key="frame" x="43" y="33" width="292" height="66"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RPa-3c-mpk" firstAttribute="leading" secondItem="NdA-xG-IpS" secondAttribute="leadingMargin" constant="23" id="ek6-qt-SEo"/>
+                            <constraint firstItem="RPa-3c-mpk" firstAttribute="top" secondItem="u8L-j1-yE0" secondAttribute="bottom" constant="13" id="yfW-GR-Bcc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="masaSelect" destination="uhn-EJ-H9N" id="GOE-BR-kGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REj-pC-XVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="-1827"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
@@ -293,6 +364,7 @@
         <image name="vTamanos" width="49" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d5a-lz-fBm"/>
+        <segue reference="aaS-G6-VZ8"/>
+        <segue reference="xIU-ZD-Nb3"/>
     </inferredMetricsTieBreakers>
 </document>

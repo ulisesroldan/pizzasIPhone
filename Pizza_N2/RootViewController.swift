@@ -11,10 +11,13 @@ import UIKit
 class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
     var pageViewController: UIPageViewController?
-
+    let pizza = Pizza(tamano: "", masa: "",queso: "",ingredientes: [], extras: [])
+    
     @IBAction func fromVistaConfirma2Inicio(segue:UIStoryboardSegue!) {
         
     }
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

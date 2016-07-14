@@ -16,6 +16,8 @@
 		E11136761D356C1F00E3085B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11136741D356C1F00E3085B /* LaunchScreen.storyboard */; };
 		E111367E1D35838600E3085B /* vistaTamano.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111367D1D35838600E3085B /* vistaTamano.swift */; };
 		E11136801D35936F00E3085B /* vistaConfirma.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111367F1D35936F00E3085B /* vistaConfirma.swift */; };
+		E11136841D36BD3200E3085B /* vistaMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11136831D36BD3200E3085B /* vistaMasa.swift */; };
+		E11136861D36FF0900E3085B /* ConfPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11136851D36FF0900E3085B /* ConfPizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E11136771D356C1F00E3085B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E111367D1D35838600E3085B /* vistaTamano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaTamano.swift; sourceTree = "<group>"; };
 		E111367F1D35936F00E3085B /* vistaConfirma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaConfirma.swift; sourceTree = "<group>"; };
+		E11136831D36BD3200E3085B /* vistaMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaMasa.swift; sourceTree = "<group>"; };
+		E11136851D36FF0900E3085B /* ConfPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfPizza.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				E11136771D356C1F00E3085B /* Info.plist */,
 				E111367D1D35838600E3085B /* vistaTamano.swift */,
 				E111367F1D35936F00E3085B /* vistaConfirma.swift */,
+				E11136831D36BD3200E3085B /* vistaMasa.swift */,
+				E11136851D36FF0900E3085B /* ConfPizza.swift */,
 			);
 			path = Pizza_N2;
 			sourceTree = "<group>";
@@ -147,11 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11136841D36BD3200E3085B /* vistaMasa.swift in Sources */,
 				E111366A1D356C1F00E3085B /* RootViewController.swift in Sources */,
 				E111366E1D356C1F00E3085B /* ModelController.swift in Sources */,
 				E111367E1D35838600E3085B /* vistaTamano.swift in Sources */,
 				E111366C1D356C1F00E3085B /* DataViewController.swift in Sources */,
 				E11136801D35936F00E3085B /* vistaConfirma.swift in Sources */,
+				E11136861D36FF0900E3085B /* ConfPizza.swift in Sources */,
 				E11136681D356C1F00E3085B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
