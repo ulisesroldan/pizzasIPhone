@@ -94,7 +94,7 @@
                                     <segue destination="c0H-B2-pLH" kind="unwind" identifier="fromVistaConfirma2Inicio" unwindAction="fromVistaConfirma2Inicio:" id="1xy-vx-Isb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-7B-icZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizzaGrande" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-7B-icZ">
                                 <rect key="frame" x="20" y="206" width="98" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tamaño" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn3-ng-umc">
@@ -124,13 +124,21 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZF-Xl-FrH">
                                 <rect key="frame" x="305" y="259" width="70" height="30"/>
                                 <state key="normal" title="Cambiar"/>
+                                <connections>
+                                    <segue destination="aMs-FZ-SvB" kind="show" identifier="vistaQuesoS" id="FmB-iR-FKj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM1-DK-2PO">
                                 <rect key="frame" x="305" y="200" width="70" height="30"/>
                                 <state key="normal" title="Cambiar"/>
                                 <connections>
-                                    <segue destination="c0H-B2-pLH" kind="unwind" unwindAction="fromVistaConfirma2Masa:" id="5Ga-Qr-9pb"/>
+                                    <action selector="btnMasa:" destination="n42-BD-5wb" eventType="touchUpInside" id="r1Z-sY-VBY"/>
+                                    <segue destination="Zhi-aR-6Dq" kind="show" identifier="vistaMasaS" id="WvM-W6-SRJ"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sva-aN-uQK">
+                                <rect key="frame" x="305" y="309" width="70" height="30"/>
+                                <state key="normal" title="Cambiar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl8-yj-LUf">
                                 <rect key="frame" x="305" y="420" width="70" height="30"/>
@@ -149,14 +157,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sva-aN-uQK">
-                                <rect key="frame" x="305" y="309" width="70" height="30"/>
-                                <state key="normal" title="Cambiar"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Esta es tu elección" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-eQ-8WU">
+                                <rect key="frame" x="68" y="36" width="292" height="37"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Confirma por favor!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="787-uf-fDU">
+                                <rect key="frame" x="85" y="74" width="258" height="28"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="787-uf-fDU" firstAttribute="centerX" secondItem="qtr-eQ-8WU" secondAttribute="centerX" id="NXK-Rl-rpM"/>
+                            <constraint firstItem="787-uf-fDU" firstAttribute="top" secondItem="qtr-eQ-8WU" secondAttribute="bottom" constant="-4" id="Nz6-HE-xLo"/>
+                            <constraint firstItem="787-uf-fDU" firstAttribute="top" secondItem="qtr-eQ-8WU" secondAttribute="bottom" constant="1" id="a1Q-t8-64d"/>
                             <constraint firstItem="iZF-Xl-FrH" firstAttribute="leading" secondItem="YM1-DK-2PO" secondAttribute="leading" id="inP-qA-mzc"/>
+                            <constraint firstItem="787-uf-fDU" firstAttribute="centerX" secondItem="qtr-eQ-8WU" secondAttribute="centerX" id="nB4-Hc-s03"/>
                             <constraint firstItem="sva-aN-uQK" firstAttribute="leading" secondItem="YM1-DK-2PO" secondAttribute="leading" id="pqb-rQ-hkB"/>
                             <constraint firstItem="rl8-yj-LUf" firstAttribute="leading" secondItem="YM1-DK-2PO" secondAttribute="leading" id="yYO-aQ-kUQ"/>
                         </constraints>
@@ -172,7 +192,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzU-73-kaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="c0H-B2-pLH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="-919"/>
+            <point key="canvasLocation" x="1668" y="-974"/>
+        </scene>
+        <!--Vista Queso-->
+        <scene sceneID="vWk-WN-Q1O">
+            <objects>
+                <viewController id="aMs-FZ-SvB" customClass="vistaQueso" customModule="Pizza_N2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CaB-gK-K7t"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rpd-kp-Z2d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KAe-Si-O9d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4O-mT-bBP">
+                                <rect key="frame" x="29" y="159" width="339" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NdA-xG-IpS" id="BMp-aV-x51"/>
+                                    <outlet property="delegate" destination="NdA-xG-IpS" id="HUs-40-ulp"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-gw-35b">
+                                <rect key="frame" x="175" y="403" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="n42-BD-5wb" kind="show" id="Z53-9i-ka7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Elige el tipo de queso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-dx-DiF">
+                                <rect key="frame" x="52" y="20" width="292" height="37"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" que desees!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZj-SO-YrK">
+                                <rect key="frame" x="122" y="53" width="153" height="28"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aSv-gw-35b" firstAttribute="centerX" secondItem="u0M-dx-DiF" secondAttribute="centerX" id="16a-xR-T3L"/>
+                            <constraint firstItem="u0M-dx-DiF" firstAttribute="top" secondItem="CaB-gK-K7t" secondAttribute="bottom" id="2VU-yw-LCx"/>
+                            <constraint firstItem="JZj-SO-YrK" firstAttribute="centerX" secondItem="u0M-dx-DiF" secondAttribute="centerX" id="4Qg-Eg-NuI"/>
+                            <constraint firstItem="JZj-SO-YrK" firstAttribute="centerX" secondItem="u0M-dx-DiF" secondAttribute="centerX" id="7Th-ba-sD5"/>
+                            <constraint firstItem="K4O-mT-bBP" firstAttribute="centerX" secondItem="u0M-dx-DiF" secondAttribute="centerX" id="DYR-cn-AHC"/>
+                            <constraint firstItem="u0M-dx-DiF" firstAttribute="top" secondItem="CaB-gK-K7t" secondAttribute="bottom" id="dKE-8J-WNy"/>
+                            <constraint firstItem="u0M-dx-DiF" firstAttribute="leading" secondItem="KAe-Si-O9d" secondAttribute="leadingMargin" constant="32" id="g2W-uH-9pH"/>
+                            <constraint firstItem="JZj-SO-YrK" firstAttribute="top" secondItem="u0M-dx-DiF" secondAttribute="bottom" constant="-4" id="ydp-0l-DXi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quesoSelect" destination="K4O-mT-bBP" id="Gp2-ol-oIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBI-Pn-AKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-1074"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="clB-vc-fyl">
@@ -202,6 +281,9 @@
                                 <state key="normal" title="Queso">
                                     <color key="titleColor" red="0.090697174229999997" green="0.1334464588" blue="0.91760817309999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="aMs-FZ-SvB" kind="show" id="iA9-pW-HVQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-IP-rvc">
                                 <rect key="frame" x="66" y="348" width="132" height="35"/>
@@ -264,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="-1702"/>
+            <point key="canvasLocation" x="815" y="-1715"/>
         </scene>
         <!--Vista Masa-->
         <scene sceneID="xQn-fG-2nm">
@@ -292,8 +374,14 @@
                                     <segue destination="n42-BD-5wb" kind="show" id="xIU-ZD-Nb3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Elige el tipo de masa que desees!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-3c-mpk">
-                                <rect key="frame" x="43" y="33" width="292" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Elige el tipo de masa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-3c-mpk">
+                                <rect key="frame" x="43" y="33" width="292" height="37"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" que desees!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7V-5c-8IK">
+                                <rect key="frame" x="113" y="66" width="153" height="28"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -301,6 +389,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="P7V-5c-8IK" firstAttribute="top" secondItem="RPa-3c-mpk" secondAttribute="bottom" constant="-4" id="IGE-fA-RJo"/>
+                            <constraint firstItem="P7V-5c-8IK" firstAttribute="centerX" secondItem="RPa-3c-mpk" secondAttribute="centerX" id="XsF-83-AqC"/>
                             <constraint firstItem="RPa-3c-mpk" firstAttribute="leading" secondItem="NdA-xG-IpS" secondAttribute="leadingMargin" constant="23" id="ek6-qt-SEo"/>
                             <constraint firstItem="RPa-3c-mpk" firstAttribute="top" secondItem="u8L-j1-yE0" secondAttribute="bottom" constant="13" id="yfW-GR-Bcc"/>
                         </constraints>
@@ -364,7 +454,9 @@
         <image name="vTamanos" width="49" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="WvM-W6-SRJ"/>
+        <segue reference="Z53-9i-ka7"/>
+        <segue reference="FmB-iR-FKj"/>
         <segue reference="aaS-G6-VZ8"/>
-        <segue reference="xIU-ZD-Nb3"/>
     </inferredMetricsTieBreakers>
 </document>

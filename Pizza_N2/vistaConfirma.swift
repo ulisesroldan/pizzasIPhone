@@ -16,8 +16,11 @@ class vistaConfirma: UIViewController {
     var sIngredientes:String=""
     var sExtras:String=""
     
-    var pizza = Pizza?()
+    //var pizza = Pizza?()
     
+    @IBAction func btnMasa(sender: AnyObject) {
+        let const:Int=1
+    }
     @IBOutlet weak var lblTamano: UILabel!
     @IBOutlet weak var lblMasa: UILabel!
     @IBOutlet weak var lblQueso: UILabel!
@@ -25,16 +28,22 @@ class vistaConfirma: UIViewController {
     @IBOutlet weak var lblExtras: UILabel!
     
     override func viewWillAppear(animated: Bool) {
-        sMasa = pizza!.masa!
+        
         lblTamano.text=sTamano
         lblMasa.text=sMasa
         lblQueso.text=sQueso
         lblIngred.text=sIngredientes
         lblExtras.text=sExtras
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        lblTamano.text=sTamano
+        lblMasa.text=sMasa
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let pizzaConfig = pizza {
+        /*if let pizzaConfig = pizza {
             //var textoIngredientes:String = ""
             for ingredientes in pizzaConfig.ingredientes! {
                 if (ingredientes != "Ninguno") {
@@ -46,11 +55,11 @@ class vistaConfirma: UIViewController {
                     sExtras += "\(extras) , "
                 }
             }
-            sTamano = pizzaConfig.tamano!
-            sMasa = pizzaConfig.masa!
-            sQueso = pizzaConfig.queso!
+            //sTamano = pizzaConfig.tamano!
+            //sMasa = pizzaConfig.masa!
+            //sQueso = pizzaConfig.queso!
         }
-       
+       */
         
         // Do any additional setup after loading the view.
     }
@@ -59,14 +68,31 @@ class vistaConfirma: UIViewController {
         if segue.identifier == "vistaTamanoS" {
             
             let vTamanoP=segue.destinationViewController as! vistaTamano
-            vTamanoP.sTamanoT=lblTamano.text!
+            //vTamanoP.sTamanoT=lblTamano.text!
+            vTamanoP.sTamanoT=sTamano
+            vTamanoP.sMasaT=sMasa
+            vTamanoP.sQuesoT=sQueso
             
         } else if segue.identifier == "fromVistaConfirma2Masa" {
             let vMasaP=segue.destinationViewController as! vistaMasa
             vMasaP.sMasaT=lblMasa.text!
+            vMasaP.sTamanoT=sTamano
+            vMasaP.sQuesoT=sQueso
             
         }
-        
+        else if segue.identifier == "vistaMasaS" {
+            let vMasaP=segue.destinationViewController as! vistaMasa
+            vMasaP.sMasaT=lblMasa.text!
+            vMasaP.sTamanoT=sTamano
+            vMasaP.sQuesoT=sQueso
+        }
+        else if segue.identifier == "vistaQuesoS" {
+            let vMasaP=segue.destinationViewController as! vistaQueso
+            vMasaP.sMasaT=lblMasa.text!
+            vMasaP.sTamanoT=sTamano
+            vMasaP.sQuesoT=sQueso
+        }
+
         else if segue.identifier == "fromVistaConfirma2Inicio" {
             
         }

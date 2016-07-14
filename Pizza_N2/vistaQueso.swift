@@ -1,42 +1,37 @@
 //
-//  vistaMasa.swift
+//  vistaQueso.swift
 //  Pizza_N2
 //
-//  Created by Francisco Ulises Roldan Trejo on 13/07/16.
+//  Created by Francisco Ulises Roldan Trejo on 14/07/16.
 //  Copyright © 2016 Francisco Ulises Roldan Trejo. All rights reserved.
-//  dd
+//
 
 import UIKit
 
-class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
+class vistaQueso: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
 
-    //var pizza = Pizza?()
-    
     var sMasaT : String = ""
     var sTamanoT : String = ""
     var sQuesoT : String = ""
     var STamanoLoc : String = ""
     //var sIngredientes[]:String
     //var sExtras[]
+
+    @IBOutlet weak var quesoSelect: UIPickerView!
     
-    @IBOutlet weak var masaSelect: UIPickerView!
     
-    @IBAction func fromVistaConfirma2Masa(segue:UIStoryboardSegue!) {
-        
-    }
-    
-    var pickerDataSource = ["Delgada", "Crujiente", "Gruesa"];
+    var pickerDataSource = ["Mozarela", "Cheddar", "Parmesano", "Sin queso"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.masaSelect.dataSource = self
-        self.masaSelect.delegate = self
+        self.quesoSelect.dataSource = self
+        self.quesoSelect.delegate = self
         // Do any additional setup after loading the view.
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
         // Dispose of any resources that can be recreated.
     }
     
@@ -56,15 +51,20 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
     {
         if(row == 0)
         {
-            sMasaT = pickerDataSource[0]
+            sQuesoT = pickerDataSource[0]
         }
         else if(row == 1)
         {
-            sMasaT = pickerDataSource[1]
+            sQuesoT = pickerDataSource[1]
         }
+        else if(row == 2)
+        {
+            sQuesoT = pickerDataSource[2]
+        }
+
         else
         {
-            sMasaT = pickerDataSource[2]
+            sQuesoT = pickerDataSource[3]
         }
     }
     
@@ -72,24 +72,27 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
         var valorLoc:Int
         //lblMasa.text=sTamanoT
         STamanoLoc = sTamanoT
-        switch sMasaT {
-        case "Delgada" :
+        
+        switch sQuesoT {
+        case "Mozarela" :
             valorLoc = 0
-        case "Crujiente" :
+        case "Cheddar" :
             valorLoc = 1
-        default :
+        case "Parmesano" :
             valorLoc = 2
+        default :
+            valorLoc = 3
         }
-        ajustaMasa(valorLoc)
+        ajustaQueso(valorLoc)
     }
-    func ajustaMasa(valorLoc: Int) -> Bool {
-        masaSelect.selectRow(valorLoc,inComponent: 0,animated: false)
-        sMasaT=pickerDataSource[valorLoc]
+    func ajustaQueso(valorLoc: Int) -> Bool {
+        quesoSelect.selectRow(valorLoc,inComponent: 0,animated: false)
+        sQuesoT=pickerDataSource[valorLoc]
         return true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        
         let vConfirma = segue.destinationViewController as! vistaConfirma
         vConfirma.sMasa=sMasaT
         vConfirma.sTamano=sTamanoT
@@ -103,15 +106,5 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
          
          }*/
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

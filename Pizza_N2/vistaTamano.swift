@@ -37,6 +37,8 @@ class vistaTamano: UIViewController {
     
 
     var sTamanoT:String=""
+    var sMasaT:String=""
+    var sQuesoT:String=""
     
     override func viewWillAppear(animated: Bool) {
         var valorLoc:Float
@@ -97,7 +99,9 @@ class vistaTamano: UIViewController {
         if ([[segue.identifier] isEqualToString:@"vistaConfirma"]){*/
            let vConfirma = segue.destinationViewController as! vistaConfirma
             vConfirma.sTamano = lblTama.text!
-            
+            vConfirma.sMasa=sMasaT
+            vConfirma.sQueso=sQuesoT
+        
         /*}
         else{
             print(segue.description)
