@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pizza_slice.png",
+      "filename" : "tamanoPizza.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tamanoPizza.jpg",
       "scale" : "2x"
     },
     {

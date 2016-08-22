@@ -19,6 +19,7 @@
 		E11136841D36BD3200E3085B /* vistaMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11136831D36BD3200E3085B /* vistaMasa.swift */; };
 		E11136861D36FF0900E3085B /* ConfPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11136851D36FF0900E3085B /* ConfPizza.swift */; };
 		E111368A1D37610700E3085B /* vistaQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11136891D37610700E3085B /* vistaQueso.swift */; };
+		E111368C1D3777D000E3085B /* vistaIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E111368B1D3777D000E3085B /* vistaIngredientes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E11136831D36BD3200E3085B /* vistaMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaMasa.swift; sourceTree = "<group>"; };
 		E11136851D36FF0900E3085B /* ConfPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfPizza.swift; sourceTree = "<group>"; };
 		E11136891D37610700E3085B /* vistaQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaQueso.swift; sourceTree = "<group>"; };
+		E111368B1D3777D000E3085B /* vistaIngredientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaIngredientes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				E11136831D36BD3200E3085B /* vistaMasa.swift */,
 				E11136851D36FF0900E3085B /* ConfPizza.swift */,
 				E11136891D37610700E3085B /* vistaQueso.swift */,
+				E111368B1D3777D000E3085B /* vistaIngredientes.swift */,
 			);
 			path = Pizza_N2;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E111368C1D3777D000E3085B /* vistaIngredientes.swift in Sources */,
 				E11136841D36BD3200E3085B /* vistaMasa.swift in Sources */,
 				E111366A1D356C1F00E3085B /* RootViewController.swift in Sources */,
 				E111366E1D356C1F00E3085B /* ModelController.swift in Sources */,
@@ -314,6 +318,7 @@
 				E111367C1D356C1F00E3085B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
