@@ -10,7 +10,7 @@ import UIKit
 
 class vistaIngredientes: UIViewController {
 
-    var switches: [UISwitch!] = []
+    var sws: [UISwitch!] = []
     var oneTrue: Bool = false
     
     
@@ -34,7 +34,7 @@ class vistaIngredientes: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sws = [btnSWJamon, btnSWPepperoni, btnSWPavo, btnSWSalchicha, btnSWAceituna, btnSWCebolla, btnSWPimiento, btnSWPina, btnSWAnchoa]
         // Do any additional setup after loading the view.
     }
 
@@ -55,7 +55,7 @@ class vistaIngredientes: UIViewController {
     }
 
     @IBAction func cambioConteo(sender: AnyObject) {
-        for sw in switches {
+        for sw in sws {
             if sw != nil {
                 if sw! != sender as! UISwitch {
                     sw.setOn(false, animated: false)

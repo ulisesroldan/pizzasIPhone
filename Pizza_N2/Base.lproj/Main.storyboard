@@ -100,7 +100,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-nf-JNK">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-nf-JNK">
                                 <rect key="frame" x="157" y="125" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="kZd-ou-3yX"/>
@@ -112,25 +112,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-bw-RjI">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-bw-RjI">
                                 <rect key="frame" x="157" y="172" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="vqr-dd-ce7"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-NR-0hI">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-NR-0hI">
                                 <rect key="frame" x="157" y="224" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="jmA-ZQ-b81"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-tA-XhN">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-tA-XhN">
                                 <rect key="frame" x="157" y="272" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="mib-ee-x7e"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-Zw-lh6">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-Zw-lh6">
                                 <rect key="frame" x="157" y="322" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="at5-QM-76s"/>
@@ -148,7 +148,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-41-EcL">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-41-EcL">
                                 <rect key="frame" x="157" y="372" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="Lfs-sV-adr"/>
@@ -166,13 +166,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Zw-f7a">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Zw-f7a">
                                 <rect key="frame" x="157" y="424" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="S77-M7-xWS"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-od-rmE">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-od-rmE">
                                 <rect key="frame" x="157" y="519" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="Sob-VL-ygU"/>
@@ -203,7 +203,7 @@
                                     <segue destination="n42-BD-5wb" kind="show" id="kr8-h7-0Lt"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frm-j1-RGq">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="frm-j1-RGq">
                                 <rect key="frame" x="157" y="476" width="51" height="31"/>
                                 <connections>
                                     <action selector="cambioConteo:" destination="1B3-oa-r2Z" eventType="valueChanged" id="3Bc-5z-cof"/>
@@ -587,10 +587,10 @@
         <image name="vTamanos" width="49" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d5a-lz-fBm"/>
-        <segue reference="iA9-pW-HVQ"/>
-        <segue reference="9et-y1-5oi"/>
-        <segue reference="anB-pK-7C8"/>
+        <segue reference="WvM-W6-SRJ"/>
         <segue reference="kr8-h7-0Lt"/>
+        <segue reference="j52-td-Yzc"/>
+        <segue reference="FmB-iR-FKj"/>
+        <segue reference="aaS-G6-VZ8"/>
     </inferredMetricsTieBreakers>
 </document>

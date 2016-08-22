@@ -43,6 +43,7 @@ class vistaConfirma: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         /*if let pizzaConfig = pizza {
             //var textoIngredientes:String = ""
             for ingredientes in pizzaConfig.ingredientes! {
