@@ -10,6 +10,9 @@ import UIKit
 
 class vistaIngredientes: UIViewController {
 
+    var switches: [UISwitch!] = []
+    var oneTrue: Bool = false
+    
     
     var sMasaT : String = ""
     var sTamanoT : String = ""
@@ -51,6 +54,19 @@ class vistaIngredientes: UIViewController {
          }*/
     }
 
+    @IBAction func cambioConteo(sender: AnyObject) {
+        for sw in switches {
+            if sw != nil {
+                if sw! != sender as! UISwitch {
+                    sw.setOn(false, animated: false)
+                } else {
+                    sw.setOn(true, animated: false)
+                    oneTrue = true
+                }
+            }
+        }
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
