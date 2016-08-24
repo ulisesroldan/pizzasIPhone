@@ -22,15 +22,7 @@ class vistaTamano: UIViewController {
     
     @IBOutlet weak var btnSliderTamaOut: UISlider!
     @IBAction func btnSliderTama(sender: AnyObject) {
-        /*switch sender {
-        case 0.0 ... 0.66:
-            lblTama.text = "Chica"
-        case 1.33 ... 2.0:
-                lblTama.text = "Grande"
-        default:
-            lblTama.text = "Mediana"
-        } */
-        
+
         let valor : Float = sender.value
         ajustaTamano(valor)
     }
@@ -39,6 +31,11 @@ class vistaTamano: UIViewController {
     var sTamanoT:String=""
     var sMasaT:String=""
     var sQuesoT:String=""
+    var sIngredientesT:String=""
+    var sIngredientesArrT = [String : Bool]()
+    var sExtrasT:String=""
+    var sExtrasArrT = [String : Bool]()
+
     
     override func viewWillAppear(animated: Bool) {
         var valorLoc:Float
@@ -82,11 +79,6 @@ class vistaTamano: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //lblTama.text = "Mediana"
-        //tamMediana.hidden = false
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,30 +87,13 @@ class vistaTamano: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        /*if segue.identifier == "vistaConfirma"
-        if ([[segue.identifier] isEqualToString:@"vistaConfirma"]){*/
-           let vConfirma = segue.destinationViewController as! vistaConfirma
+            let vConfirma = segue.destinationViewController as! vistaConfirma
             vConfirma.sTamano = lblTama.text!
             vConfirma.sMasa=sMasaT
             vConfirma.sQueso=sQuesoT
-        
-        /*}
-        else{
-            print(segue.description)
-            
-        }*/
+            vConfirma.sIngredientes = sIngredientesT
+            vConfirma.sIngredientesArr = sIngredientesArrT
+            vConfirma.sExtras = sExtrasT
+            vConfirma.sExtrasArr = sExtrasArrT
     }
-    
-       /*Esta es la vista tamaño que sale al click en el mainstoryboard
- */
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

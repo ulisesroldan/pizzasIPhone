@@ -12,13 +12,17 @@ class vistaIngredientes: UIViewController {
 
     var sws: [UISwitch!] = []
     var oneTrue: Bool = false
-    
+    //var ingredientes = ColeccionDeIngredientes()
     
     var sMasaT : String = ""
     var sTamanoT : String = ""
     var sQuesoT : String = ""
-    //var sIngredientes[]:String
-    //var sExtras[]
+    var sExtrasT:String=""
+    var sExtrasArrT = [String : Bool]()
+    var sIngredientesT:String=""
+    var sIngredientesArrT = [String : Bool]()
+    
+    var ingredientesCount : Int = 0
 
     
     @IBOutlet weak var btnSWJamon: UISwitch!
@@ -32,55 +36,141 @@ class vistaIngredientes: UIViewController {
     @IBOutlet weak var btnSWAnchoa: UISwitch!
     
     
+    override func viewWillAppear(animated: Bool) {
+        sws = [btnSWJamon, btnSWPepperoni, btnSWPavo, btnSWSalchicha, btnSWAceituna, btnSWCebolla, btnSWPimiento, btnSWPina, btnSWAnchoa]
+
+        if (sIngredientesT != "") {
+           asignaValoresSW()
+        }
+        
+    }
+    
+    func asignaValoresSW() -> Bool {
+        btnSWJamon.setOn(sIngredientesArrT["btnSWJamon"]!, animated: false)
+        btnSWPepperoni.setOn(sIngredientesArrT["btnSWPepperoni"]!, animated: false)
+        btnSWPavo.setOn(sIngredientesArrT["btnSWPavo"]!, animated: false)
+        btnSWSalchicha.setOn(sIngredientesArrT["btnSWSalchicha"]!, animated: false)
+        btnSWAceituna.setOn(sIngredientesArrT["btnSWAceituna"]!, animated: false)
+        btnSWCebolla.setOn(sIngredientesArrT["btnSWCebolla"]!, animated: false)
+        btnSWPimiento.setOn(sIngredientesArrT["btnSWPimiento"]!, animated: false)
+        btnSWPina.setOn(sIngredientesArrT["btnSWPina"]!, animated: false)
+        btnSWAnchoa.setOn(sIngredientesArrT["btnSWAnchoa"]!, animated: false)
+        
+        return true
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        sws = [btnSWJamon, btnSWPepperoni, btnSWPavo, btnSWSalchicha, btnSWAceituna, btnSWCebolla, btnSWPimiento, btnSWPina, btnSWAnchoa]
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
 
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        actualizaValoresSW()
+        if ingredientesCount < 5 {
+            let alert = UIAlertController(title: "Ingredientes", message: "Seleccione al menos 5 ingredientes por favor.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+            return false
+            }
+                
+            else {
+                return true
+            }
+        // by default, transition
+        return true
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let vConfirma = segue.destinationViewController as! vistaConfirma
         vConfirma.sMasa=sMasaT
         vConfirma.sTamano=sTamanoT
         vConfirma.sQueso=sQuesoT
-        //vConfirma.sIngredientes=sIngredien
-        //lblExtras.text=sExtras
-        //pizza?.masa = sMasaT
-        /*}
-         else{
-         print(segue.description)
-         
-         }*/
+        
+        
+        vConfirma.sIngredientes=sIngredientesT
+        vConfirma.sIngredientesArr=sIngredientesArrT
+        vConfirma.sExtras = sExtrasT
+        vConfirma.sExtrasArr = sExtrasArrT
     }
-
-    @IBAction func cambioConteo(sender: AnyObject) {
-        for sw in sws {
-            if sw != nil {
-                if sw! != sender as! UISwitch {
-                    sw.setOn(false, animated: false)
-                } else {
-                    sw.setOn(true, animated: false)
-                    oneTrue = true
-                }
-            }
+    func actualizaValoresSW() -> Bool {
+        sIngredientesArrT["btnSWJamon"] = btnSWJamon.on 
+        sIngredientesArrT["btnSWPepperoni"] = btnSWPepperoni.on
+        sIngredientesArrT["btnSWPavo"] = btnSWPavo.on
+        sIngredientesArrT["btnSWSalchicha"] = btnSWSalchicha.on
+        sIngredientesArrT["btnSWAceituna"] = btnSWAceituna.on
+        sIngredientesArrT["btnSWCebolla"] = btnSWCebolla.on
+        sIngredientesArrT["btnSWPimiento"] = btnSWPimiento.on
+        sIngredientesArrT["btnSWPina"] = btnSWPina.on
+        sIngredientesArrT["btnSWAnchoa"] = btnSWAnchoa.on
+        
+        sIngredientesT = ""
+        
+        if btnSWJamon.on {
+            //sIngredientesArrT["btnSWJamon"] = btnSWJamon.on
+            sIngredientesT = "Jamón"
+            ingredientesCount += 1
         }
-
+        
+        
+        if btnSWPepperoni.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Pepperoni"
+            ingredientesCount += 1
+            
+        }
+        if btnSWPavo.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Pavo"
+            ingredientesCount += 1
+        }
+        if btnSWSalchicha.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Salchicha"
+            ingredientesCount += 1
+        }
+        if btnSWAceituna.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Aceituna"
+            ingredientesCount += 1
+        }
+        if btnSWCebolla.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Cebolla"
+            ingredientesCount += 1
+        }
+        if btnSWPimiento.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Pimiento"
+            ingredientesCount += 1
+        }
+        if btnSWPina.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Piña"
+            ingredientesCount += 1
+        }
+        if btnSWAnchoa.on {
+            if sIngredientesT != "" {sIngredientesT = sIngredientesT + ", "}
+            sIngredientesT = sIngredientesT + "Anchoa"
+            ingredientesCount += 1
+        }
+        return true
+        
     }
+    
+    @IBAction func cambioConteo(sender: AnyObject) {
+        
+        }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

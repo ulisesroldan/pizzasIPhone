@@ -14,8 +14,10 @@ class vistaQueso: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource 
     var sTamanoT : String = ""
     var sQuesoT : String = ""
     var STamanoLoc : String = ""
-    //var sIngredientes[]:String
-    //var sExtras[]
+    var sIngredientesT:String=""
+    var sIngredientesArrT = [String : Bool]()
+    var sExtrasT:String=""
+    var sExtrasArrT = [String : Bool]()
 
     @IBOutlet weak var quesoSelect: UIPickerView!
     
@@ -70,7 +72,7 @@ class vistaQueso: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource 
     
     override func viewWillAppear(animated: Bool) {
         var valorLoc:Int
-        //lblMasa.text=sTamanoT
+
         STamanoLoc = sTamanoT
         
         switch sQuesoT {
@@ -97,14 +99,10 @@ class vistaQueso: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource 
         vConfirma.sMasa=sMasaT
         vConfirma.sTamano=sTamanoT
         vConfirma.sQueso=sQuesoT
-        //vConfirma.sIngredientes=sIngredien
-        //lblExtras.text=sExtras
-        //pizza?.masa = sMasaT
-        /*}
-         else{
-         print(segue.description)
-         
-         }*/
-    }
+        vConfirma.sIngredientes = sIngredientesT
+        vConfirma.sIngredientesArr = sIngredientesArrT
+        vConfirma.sExtras = sExtrasT
+        vConfirma.sExtrasArr = sExtrasArrT
+}
 
 }

@@ -16,7 +16,11 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
     var sTamanoT : String = ""
     var sQuesoT : String = ""
     var STamanoLoc : String = ""
-    //var sIngredientes[]:String
+    var sIngredientesT:String=""
+    var sIngredientesArrT = [String : Bool]()
+    var sExtrasT:String=""
+    var sExtrasArrT = [String : Bool]()
+    
     //var sExtras[]
     
     @IBOutlet weak var masaSelect: UIPickerView!
@@ -70,7 +74,7 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
     
     override func viewWillAppear(animated: Bool) {
         var valorLoc:Int
-        //lblMasa.text=sTamanoT
+
         STamanoLoc = sTamanoT
         switch sMasaT {
         case "Delgada" :
@@ -94,24 +98,10 @@ class vistaMasa: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
         vConfirma.sMasa=sMasaT
         vConfirma.sTamano=sTamanoT
         vConfirma.sQueso=sQuesoT
-        //vConfirma.sIngredientes=sIngredien
-        //lblExtras.text=sExtras
-        //pizza?.masa = sMasaT
-        /*}
-         else{
-         print(segue.description)
-         
-         }*/
+        vConfirma.sIngredientes = sIngredientesT
+        vConfirma.sIngredientesArr = sIngredientesArrT
+        vConfirma.sExtras = sExtrasT
+        vConfirma.sExtrasArr = sExtrasArrT
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
